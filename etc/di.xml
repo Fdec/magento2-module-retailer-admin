@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Smile
+ * @package   Smile\RetailerAdmin
+ * @author    Florent Maissiat <florent.maissiat@smile.eu>
+ * @copyright 2019 Smile
+ * @license   OSL-3.0
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\User\Block\User\Edit\Tab\Main" type="Smile\RetailerAdmin\Rewrite\User\Block\User\Edit\Tab\Main" />
+    <preference for="Smile\RetailerAdmin\Api\AdminRetailersInterface" type="Smile\RetailerAdmin\Model\AdminRetailers" />
+
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="seller_id" xsi:type="string">sales_order.seller_id</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Invoice\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="seller_id" xsi:type="string">sales_order.seller_id</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="ShipmentGridAggregator">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="seller_id" xsi:type="string">sales_order.seller_id</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="CreditmemoGridAggregator">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="seller_id" xsi:type="string">sales_order.seller_id</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+</config>

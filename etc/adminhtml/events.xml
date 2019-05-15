@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Adminthml Events
+ *
+ * @category  Smile
+ * @package   Smile\RetailerAdmin
+ * @author    Florent Maissiat <florent.maissiat@smile.eu>
+ * @copyright 2019 Smile
+ * @license   OSL-3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="core_collection_abstract_load_before">
+        <observer name="dynamic-retailer-filter" instance="Smile\RetailerAdmin\Observer\DynamicFilterObserver"/>
+    </event>
+
+    <event name="model_load_after">
+        <observer name="empty-object-with-wrong-retailer" instance="Smile\RetailerAdmin\Observer\DynamicModelFilterObserver"/>
+    </event>
+
+    <event name="core_abstract_save_before">
+        <observer name="add-seller-id-on-rma-grid" instance="Smile\RetailerAdmin\Observer\Magento\AddRetailerOnRmaGrid"/>
+    </event>
+</config>

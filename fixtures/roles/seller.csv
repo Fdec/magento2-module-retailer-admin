@@ -1,0 +1,2 @@
+role_name,parent_id,role_type,user_type,rules
+seller,0,G,2,Smile_RetailerAdmin::fixtures/roles/rules/seller.csv
