@@ -1,5 +1,10 @@
 <?php
 /**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future.
+ *
  * @category  Smile
  * @package   Smile\RetailerAdmin
  * @author    Florent Maissiat <florent.maissiat@smile.eu>
@@ -157,7 +162,7 @@ class AdminRetailers implements AdminRetailersInterface
             }
 
             $criteria = $this->criteriaBuilderFactory->create();
-            $criteria->addFilter('entity_id', $retailerIds);
+            $criteria->addFilter('entity_id', $retailerIds, 'IN');
 
             $this->registry->register(self::PREVENT_FILTER_FLAG, true, true);
             $this->retailers = $this->retailerRepository->getList($criteria->create())->getItems();
