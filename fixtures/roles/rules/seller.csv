@@ -1,7 +1,3 @@
-Dompro_CatalogPrice::DiscountCustomerPrice
-Dompro_CatalogPrice::DiscountGroup
-Dompro_CatalogPrice::DiscountProductFamily
-Dompro_CatalogPrice::prices
 Magento_Backend::admin
 Magento_Backend::convert
 Magento_Backend::system

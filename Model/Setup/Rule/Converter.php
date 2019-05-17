@@ -1,5 +1,10 @@
 <?php
 /**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future.
+ *
  * Rule Converter.
  *
  * @category  Smile
@@ -77,6 +82,7 @@ class Converter
      *
      * @return array
      *
+     * @throws \Exception
      * @throws \Magento\Framework\Exception\FileSystemException
      * @throws \Magento\Framework\Exception\LocalizedException
      */

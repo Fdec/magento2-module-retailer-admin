@@ -1,10 +1,16 @@
 <?php
 /**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future.
+ *
  * Upgrade Data.
  *
  * @category  Smile
  * @package   Smile\RetailerAdmin
  * @author    Tony DEPLANQUE <tony.deplanque@smile.fr>
+ * @author    Fanny DECLERCK <fadec@smile.fr>
  * @copyright 2019 Smile
  * @license   OSL-3.0
  */
@@ -18,7 +24,7 @@ use Smile\RetailerAdmin\Model\Setup\Role as RoleSetup;
 /**
  * Class UpgradeData
  *
- * @package Dompro\CatalogPrice\Setup
+ * @package Smile\RetailerAdmin\Setup
  */
 class UpgradeData implements UpgradeDataInterface
 {
