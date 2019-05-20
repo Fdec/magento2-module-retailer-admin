@@ -39,9 +39,9 @@ class ContextPlugin
     /**
      * Check role before add button.
      *
-     * @param Context              $subject
-     * @param array                $buttons
-     * @param UiComponentInterface $component
+     * @param Context              $subject   Subject.
+     * @param array                $buttons   Buttons.
+     * @param UiComponentInterface $component Component.
      *
      * @return array
      * @SuppressWarnings(PHPMD.UnusedFormalParameters)

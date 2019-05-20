@@ -4,7 +4,7 @@
  * @package   Smile\RetailerAdmin
  * @author    Florent Maissiat <florent.maissiat@smile.eu>
  * @copyright 2019 Smile
- * @license   OSL-3.0
+ * @license   Open Software License ("OSL") v. 3.0
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,

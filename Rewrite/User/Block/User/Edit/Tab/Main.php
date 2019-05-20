@@ -10,7 +10,7 @@
  * @author    Florent Maissiat <florent.maissiat@smile.eu>
  * @author    Fanny DECLERCK <fadec@smile.fr>
  * @copyright 2019 Smile
- * @license   OSL-3.0
+ * @license   Open Software License ("OSL") v. 3.0
  */
 namespace Smile\RetailerAdmin\Rewrite\User\Block\User\Edit\Tab;
 
@@ -66,6 +66,7 @@ class Main extends \Magento\User\Block\User\Edit\Tab\Main
      * Prepare form fields
      *
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName) - Magento property name.
      * @return \Magento\Backend\Block\Widget\Form
      */
     protected function _prepareForm()
@@ -83,12 +84,16 @@ class Main extends \Magento\User\Block\User\Edit\Tab\Main
         }
 
         $fieldset = $form->addFieldset('retailer', ['legend' => __('Retailer Information')]);
-        $fieldset->addField('allowed_retailer', 'multiselect', [
-            'name' => 'extra[retailers]',
-            'values' => $this->getRetailersListToOptionArray(),
-            'label' => 'Allowed retailers',
-            'value' => $extra['retailers'] ?? []
-        ]);
+        $fieldset->addField(
+            'allowed_retailer',
+            'multiselect',
+            [
+                'name' => 'extra[retailers]',
+                'values' => $this->getRetailersListToOptionArray(),
+                'label' => 'Allowed retailers',
+                'value' => $extra['retailers'] ?? [],
+            ]
+        );
 
         return $this;
     }
@@ -105,9 +110,8 @@ class Main extends \Magento\User\Block\User\Edit\Tab\Main
         return array_map(function (RetailerInterface $retailer) {
             return [
                 'value' => $retailer->getId(),
-                'label' => $retailer->getName()
+                'label' => $retailer->getName(),
             ];
         }, $searchResults->getItems());
-
     }
 }

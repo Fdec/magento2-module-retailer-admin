@@ -9,7 +9,7 @@
  * @package   Smile\RetailerAdmin
  * @author    Fanny DECLERCK <fadec@smile.fr>
  * @copyright 2019 Smile
- * @license   OSL-3.0
+ * @license   Open Software License ("OSL") v. 3.0
  */
 namespace Smile\RetailerAdmin\Model\Source;
 
@@ -33,8 +33,8 @@ class Retailers extends AbstractSource
     /**
      * Retailers constructor.
      *
-     * @param RetailerRepositoryInterface  $retailerRepository
-     * @param SearchCriteriaBuilderFactory $searchCriteriaBuilder
+     * @param RetailerRepositoryInterface  $retailerRepository    Retailer Repository.
+     * @param SearchCriteriaBuilderFactory $searchCriteriaBuilder Search criteria builder.
      */
     public function __construct(
         RetailerRepositoryInterface $retailerRepository,

@@ -79,6 +79,7 @@ class FilterHelper
      * @param bool $defaultToAll When true, if there are not ids, returns all ids
      *
      * @return int[]
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getFilterSellerIds(bool $defaultToAll = true): array
     {

@@ -9,7 +9,7 @@
  * @package   Smile\RetailerAdmin
  * @author    Florent Maissiat <florent.maissiat@smile.eu>
  * @copyright 2019 Smile
- * @license   OSL-3.0
+ * @license   Open Software License ("OSL") v. 3.0
  */
 namespace Smile\RetailerAdmin\Api;
 

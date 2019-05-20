@@ -9,7 +9,7 @@
  * @package   Smile\RetailerAdmin
  * @author    Fanny DECLERCK <fadec@smile.fr>
  * @copyright 2019 Smile
- * @license   OSL-3.0
+ * @license   Open Software License ("OSL") v. 3.0
  */
 namespace Smile\RetailerAdmin\Block\Widget\Grid\Column\Renderer;
 
@@ -34,13 +34,12 @@ class Retailers extends AbstractRenderer
     /**
      * Retailers constructor.
      *
-     * @param Context                      $context
-     * @param RetailerRepositoryInterface  $retailerRepository
-     * @param SearchCriteriaBuilderFactory $criteriaBuilder
-     * @param array                        $data
+     * @param Context                      $context            Context.
+     * @param RetailerRepositoryInterface  $retailerRepository Retailer repository.
+     * @param SearchCriteriaBuilderFactory $criteriaBuilder    Criteria builder.
+     * @param array                        $data               Data.
      */
-    public function __construct
-    (
+    public function __construct(
         Context $context,
         RetailerRepositoryInterface $retailerRepository,
         SearchCriteriaBuilderFactory $criteriaBuilder,
@@ -55,7 +54,7 @@ class Retailers extends AbstractRenderer
     /**
      * Returns formatted data.
      *
-     * @param \Magento\Framework\DataObject $row
+     * @param \Magento\Framework\DataObject $row Row.
      *
      * @return string
      */

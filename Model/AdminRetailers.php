@@ -9,7 +9,7 @@
  * @package   Smile\RetailerAdmin
  * @author    Florent Maissiat <florent.maissiat@smile.eu>
  * @copyright 2019 Smile
- * @license   OSL-3.0
+ * @license   Open Software License ("OSL") v. 3.0
  */
 namespace Smile\RetailerAdmin\Model;
 
@@ -134,7 +134,8 @@ class AdminRetailers implements AdminRetailersInterface
         if ($defaultToAll && count($retailerIds) === 0) {
             $retailerIds = $this->getAllRetailers();
         }
-        return  array_map(function (RetailerInterface $retailer): int {
+
+        return  array_map(function (RetailerInterface $retailer) : int {
             return $retailer->getId();
         }, $retailerIds);
     }
@@ -186,6 +187,7 @@ class AdminRetailers implements AdminRetailersInterface
         if (\is_string($customerExtra)) {
             $customerExtra = json_decode($customerExtra, true);
         }
+
         return $customerExtra['retailers'] ?? [];
     }
 
