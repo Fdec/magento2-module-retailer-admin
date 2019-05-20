@@ -69,7 +69,7 @@ class Retailers extends AbstractRenderer
         if (!$extra || !isset($extra['retailers'])) {
             return '';
         }
-        
+
         $criteria = $this->criteriaBuilderFactory->create();
         $criteria->addFilter('entity_id', $extra['retailers'], 'IN');
         $retailers = $this->retailerRepository->getList($criteria->create())->getItems();

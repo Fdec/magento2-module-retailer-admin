@@ -80,7 +80,11 @@ class DynamicModelFilterObserver implements ObserverInterface
         $resource = $object->getResource()->getConnection();
         $retailerTableName = $this->filterHelper->getSellerTable();
 
-        $adminRetailerIds = $this->filterHelper->getFilterSellerIds();
+        $adminRetailerIds = $this->filterHelper->getFilterSellerIds(false);
+
+        if (count($adminRetailerIds) === 0) {
+            return;
+        }
 
         $foreignKeys = $resource->getForeignKeys($table);
 

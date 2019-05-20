@@ -76,11 +76,13 @@ class FilterHelper
     /**
      * Get the list of Retailer/Seller id to use in filtering.
      *
+     * @param bool $defaultToAll When true, if there are not ids, returns all ids
+     *
      * @return int[]
      */
-    public function getFilterSellerIds(): array
+    public function getFilterSellerIds(bool $defaultToAll = true): array
     {
-        return $this->adminRetailers->getAdminRetailerIds();
+        return $this->adminRetailers->getAdminRetailerIds($defaultToAll);
     }
 
     /**
@@ -97,10 +99,16 @@ class FilterHelper
      */
     public function applyFilterOnCollection(AbstractDb $collection, string $alias = null, string $column = null)
     {
+        $sellerIds = $this->getFilterSellerIds(false);
+
+        if (count($sellerIds) === 0) {
+            return;
+        }
+
         $column = $column ?? $this->getSellerPrimaryKey();
 
         $key = $alias ? ($alias . '.' . $column) : $column;
 
-        $collection->addFieldToFilter($key, ['in' => $this->getFilterSellerIds()]);
+        $collection->addFieldToFilter($key, ['in' => $sellerIds]);
     }
 }

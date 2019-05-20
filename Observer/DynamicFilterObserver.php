@@ -45,6 +45,7 @@ class DynamicFilterObserver implements ObserverInterface
      *
      * {@event core_collection_abstract_load_before; @area: adminhtml}
      * @throws \Zend_Db_Select_Exception
+     * @throws \Exception
      */
     public function execute(Observer $observer)
     {
