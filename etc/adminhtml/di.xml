@@ -21,4 +21,7 @@
     <type name="Magento\Framework\Data\Collection\AbstractDb">
         <plugin name="filter-retailer-before-load" type="Smile\RetailerAdmin\Plugin\Framework\Data\Collection\AbstractDbPlugin" />
     </type>
+    <type name="Magento\Framework\View\Element\UiComponent\Context">
+        <plugin name="check-add-button-new-retailer" type="Smile\RetailerAdmin\Plugin\Framework\View\Element\UiComponent\ContextPlugin" />
+    </type>
 </config>

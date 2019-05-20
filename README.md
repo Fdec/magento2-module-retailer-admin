@@ -8,7 +8,7 @@ This module add the ability to manage ACL in admin panel per Retailer Shop.
 
 The module requires :
 
-- [Retailer](https://github.com/Smile-SA/magento2-module-retailer) > 1.2.*
+- [Retailer](https://github.com/Smile-SA/magento2-module-retailer) > 1.2.5
 - [Offer](https://github.com/Smile-SA/magento2-module-offer) > 1.3.*
 
 ### How to use
