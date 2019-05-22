@@ -26,10 +26,9 @@
                            after="role_name">
                         <arguments>
                             <argument name="header" xsi:type="string" translate="true">Retailers</argument>
-                            <argument name="type" xsi:type="string">options</argument>
-                            <argument name="options" xsi:type="options" model="Smile\RetailerAdmin\Model\Source\Retailers"/>
-                            <argument name="index" xsi:type="string">retailers</argument>
                             <argument name="renderer" xsi:type="string">Smile\RetailerAdmin\Block\Widget\Grid\Column\Renderer\Retailers</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="filter" xsi:type="string">0</argument>
                         </arguments>
                     </block>
                 </referenceBlock>
