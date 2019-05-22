@@ -39,7 +39,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Smile\\RetailerAdminAcl\\" : ""
+            "Smile\\RetailerAdmin\\" : ""
         }
     },
     "minimum-stability": "dev",
