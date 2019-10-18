@@ -1,4 +1,4 @@
-## Smile Retailer Offer 
+## Smile Retailer Admin 
 
 This module is a plugin for [RetailerSuite](https://github.com/Smile-SA/elasticsuite-for-retailer).
 
