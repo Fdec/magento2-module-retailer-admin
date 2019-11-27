@@ -6,8 +6,8 @@
 <!-- Magento Version : Are you using Magento CE or EE ? Which version of Magento are you using exactly ? -->
 Magento Version :
 
-<!-- ElasticSuite Version : Which exact version of ElasticSuite are you using ? -->
-ElasticSuite Version :
+<!-- Module Map Version : Which exact version of Module Map are you using ? -->
+Module Retailer Admin Version :
 
 <!-- Magento Environment : are you in Developer or Production mode ? -->
 Environment :
